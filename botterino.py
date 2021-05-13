@@ -1,4 +1,4 @@
-from config import pg, username
+from config import pg, username, donotupdate
 from sty import fg
 from Utils.utils import waitForApproval, approved, postDelay, randomColor
 from Utils import update
@@ -19,7 +19,7 @@ def checkType(r):
 
 parser = configparser.ConfigParser()
 parser.read('praw.ini')
-if not parser['botterino'].get('donotupdate'):
+if not donotupdate:
     print(f'{fg.cyan}Checking for updates...')
     if update.hasUpdate():
         doUpdate = input(f'{randomColor()}There is an update available! Would you like to update? Enter Y/N ').lower() == 'y'

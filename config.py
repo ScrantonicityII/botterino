@@ -6,7 +6,7 @@ debug = False
 roundfile = 'rounds/rounds.yaml'
 archivefile = 'rounds/archive.yaml'
 
-reddit = praw.Reddit('SuperFreakonomics')
+reddit = praw.Reddit('SuperFreakonomics', user_agent="picturegame hosting bot")
 pg = reddit.subreddit('PictureGameRounds' if debug else 'PictureGame')
 
 try:
@@ -23,5 +23,7 @@ donotreply = {
     'r-picturegame',
     'imreallycuriousbird',
 }
+
+donotupdate = True
 
 incorrect = 'x'
