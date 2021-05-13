@@ -3,11 +3,11 @@ from sty import fg
 
 debug = False
 
-roundfile = 'Rounds/rounds.yaml'
-archivefile = 'Rounds/archive.yaml'
+roundfile = 'rounds/rounds.yaml'
+archivefile = 'rounds/archive.yaml'
 
-reddit = praw.Reddit('botterino')
-pg = reddit.subreddit('itoxtestingfacility' if debug else 'picturegame')
+reddit = praw.Reddit('SuperFreakonomics')
+pg = reddit.subreddit('PictureGameRounds' if debug else 'PictureGame')
 
 try:
     print(f'{fg.green}Successfully logged into reddit as {reddit.user.me()}')
@@ -24,4 +24,4 @@ donotreply = {
     'imreallycuriousbird',
 }
 
-incorrect = '❌'
+incorrect = 'x'

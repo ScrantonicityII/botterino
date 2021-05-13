@@ -3,8 +3,8 @@ from sty import fg
 from Utils.utils import waitForApproval, approved, postDelay, randomColor
 from Utils import update
 from Loader.loader import getRound
-from Botterino.posterino import submitRound
-from Botterino.hosterino import checkAnswers
+from botterino.posterino import submitRound
+from botterino.hosterino import checkAnswers
 import time
 import configparser
 
@@ -33,7 +33,6 @@ if not parser['botterino'].get('donotupdate'):
 while True:
     print(f'{fg.yellow}Waiting for {username} to win a round... 🐌')
     waitForApproval()
-    print(f'{fg.blue}Congrats on a well deserved win {username}! ⭐')
     r = getRound()
     while not r:
         print(f'{fg.red}No rounds in round file! checking again in 10s')

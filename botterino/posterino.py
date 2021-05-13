@@ -10,7 +10,5 @@ def submitRound(r):
     if message is not None:
         time.sleep(15)
         submission.reply(message)
-
         print(f'{randomColor()}Message posted to thread: {message}')
-
     return submission
